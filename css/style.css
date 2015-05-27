@@ -1,0 +1,21 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif; }
+
+.img-slider-container {
+  margin: 0 auto;
+  max-width: 1500px;
+  overflow: hidden; }
+  .img-slider-container .img-slider {
+    position: relative;
+    height: 280px;
+    padding: 0; }
+    .img-slider-container .img-slider li {
+      max-width: 100%;
+      float: left;
+      list-style: none; }
+      .img-slider-container .img-slider li img {
+        max-width: 500px; }
+
+/*# sourceMappingURL=style.css.map */
