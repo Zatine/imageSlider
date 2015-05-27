@@ -7,10 +7,10 @@ body{
 .img-slider-container{
   margin: 0 auto;
   max-width: 1500px;
-  overflow: hidden;
 
   .img-slider{
     position: relative;
+    overflow: hidden;
     height: 280px;
     padding:0;
     li{
@@ -19,7 +19,6 @@ body{
       list-style: none;
 
       img{
-        max-width: 500px;
       }
     }
   }
