@@ -1,18 +1,28 @@
 body{
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Indie Flower', sans-serif;
+  background: #dddddd;
+}
+
+h1{
+  text-align: center;
+  font-size: 5em;
 }
 
 .img-slider-container{
-  margin: 0 auto;
+  margin: 20px auto;
   overflow: hidden;
-  max-width: 1200px;
-
+  width : 100%;
+  max-width: 1400px;
+  border-radius: 10px;
+  height: 500px;
   .img-slider{
     position: relative;
     overflow: hidden;
+    margin: 0;
     padding:0;
+    box-shadow: inset white 0px 0px 50px;
     li{
       float:left;
       list-style: none;
