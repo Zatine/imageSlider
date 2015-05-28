@@ -5,14 +5,13 @@ body {
 
 .img-slider-container {
   margin: 0 auto;
-  max-width: 1500px; }
+  overflow: hidden;
+  max-width: 1200px; }
   .img-slider-container .img-slider {
     position: relative;
     overflow: hidden;
-    height: 280px;
     padding: 0; }
     .img-slider-container .img-slider li {
-      max-width: 100%;
       float: left;
       list-style: none; }
 
