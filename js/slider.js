@@ -11,28 +11,30 @@ var slider = document.getElementsByClassName('img-slider'),
     slider[0].style.width = sliderWidth + "px";
 
 //Animation
+var times = 0;
 setInterval(function() {
-    console.log("Hej");
+        moveLeft(slider[0]);
+        times++;
         function moveLeft(item) {
             var currentMargin = parseInt(item.style.marginLeft) ? parseInt(item.style.marginLeft) : 0;
-            //var max = (-1 * (imageWidth - 100));
+            var max = (-1 * (imageWidth * times - 100));
 
             //Reset and cancel movement at the end of the last picture
-            if(-1 * (sliderWidth - imageWidth) >= (currentMargin)){item.style.marginLeft = 0 + "px"; clearInterval(moveImage);}
+            if(-1 * (sliderWidth - imageWidth) >= (currentMargin)){item.style.marginLeft = 0 + "px"; clearInterval(moveImage); times = 0;}
 
             else{
-               // if (currentMargin < max) {
-                //    item.style.marginLeft = currentMargin - 2 + "px";
-                //}
-                //else {
-                    item.style.marginLeft = currentMargin - 10 + "px";
-               // }
+                if (currentMargin < max) {
+                    item.style.marginLeft = currentMargin - 2 + "px";
+                }
+                else {
+                    item.style.marginLeft = currentMargin - 7 + "px";
+                }
 
-                if (currentMargin % (-1 * imageWidth) == 0) {
+                if (currentMargin % (-1 * imageWidth) == 0 || currentMargin < (-1 * imageWidth * times)) {
                     clearInterval(moveImage);
                 }
             }
         }
 
         var moveImage = setInterval(function () {moveLeft(slider[0]);}, 1);
-}, 2000);
+}, 4000);
