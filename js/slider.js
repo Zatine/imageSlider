@@ -14,21 +14,23 @@ var slider = document.getElementsByClassName('img-slider'),
 setInterval(function() {
         function moveLeft(item) {
             var currentMargin = parseInt(item.style.marginLeft) ? parseInt(item.style.marginLeft) : 0;
-            var max = (-1 * (imageWidth - 100)) + currentMargin;
+            var max = (-1 * (imageWidth - 100));
 
             //Reset and cancel movement at the end of the last picture
             if(-1 * (sliderWidth - imageWidth) >= (currentMargin)){item.style.marginLeft = 0 + "px"; clearInterval(moveImage);}
-            else{
-            if (currentMargin < max) {
-                item.style.marginLeft = currentMargin - 2 + "px";
-            }
-            else {
-                item.style.marginLeft = currentMargin - 10 + "px";
-            }
 
-            if (currentMargin % (-1 * imageWidth) == 0) {
-                clearInterval(moveImage);
-            }}
+            else{
+                if (currentMargin < max) {
+                    item.style.marginLeft = currentMargin - 2 + "px";
+                }
+                else {
+                    item.style.marginLeft = currentMargin - 10 + "px";
+                }
+
+                if (currentMargin % (-1 * imageWidth) == 0) {
+                    clearInterval(moveImage);
+                }
+            }
         }
 
         var moveImage = setInterval(function () {moveLeft(slider[0]);}, 1);
